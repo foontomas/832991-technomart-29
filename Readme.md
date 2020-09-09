@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Денис Попов](https://up.htmlacademy.ru/htmlcss/29/user/832991).
-* Наставник: [Диана Катанаева] (https://htmlacademy.ru/profile/id453609).
+* Наставник: [Диана Катанаева](https://htmlacademy.ru/profile/id453609).
 
 ---
 

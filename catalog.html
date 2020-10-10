@@ -14,7 +14,7 @@
           <img src="#" alt="логотип магазина Техномарт">
         </div>
         <label class="header-top__search"> <!--Без Label и с псевдоэлементом ::before или с картинкой в label-->
-          <input class="header-top__search" type="search" name="search" aria-label="Поле для поиска" placeholder="Поиск:">
+          <input type="search" name="search" aria-label="Поле для поиска" placeholder="Поиск:">
         </label>
         <ul class="header-top__menu">
         <li>
@@ -24,7 +24,7 @@
         </li>
         <li>
           <a href="#">
-            Корзина: 0
+            Корзина: 10
           </a>
         </li>
         <li>
@@ -44,15 +44,31 @@
           </svg> 
           <a href="tel:+78125550555">+7(812) 555-05-55</a>
         </span>
-        <p class="header-address">
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-        </p>
-        <a class="header-middle__login" href="#">
-          Войти
-        </a>
-        <a class="header-middle__register" href="#">
-          Регистрация
-        </a>
+        <p class="header-middle__address">
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+          </p>
+          <div class="header-middle__user-block">
+            <div class="user">
+              <a class="user__name" href="#">
+                Равшан Джамшутович
+              </a>
+              <a class="user__logout" href="#" aria-label="Выйти из профиля">
+                <img src="" alt="кнопка выхода из профиля">
+              </a>
+            </div>
+            <ul class="user-links">
+              <li> 
+                <a class="user-links__orders" href="#">
+                  Мои заказы
+                </a>
+              </li>
+              <li>
+                <a class="user-links__account" href="#">
+                  Личный кабинет
+                </a>
+              </li>
+            </ul>
+          </div>
 
       </div>
       
@@ -108,7 +124,7 @@
           </a>
         </li>
       </ul>
-      <h2>
+      <h2 class="section-headers">
         перфораторы
       </h2>
       <h3>
@@ -164,25 +180,25 @@
         </button>
       </form>
       <section class="catalog">
-        <div class="catalog__sortby">
-          <h3 class="sortby-title">
+        <div class="sortby">
+          <h3 class="sortby__title">
             Сортировка:
           </h3>
           <ul>
             <li>
-              <a href="#">
+              <button class="sortby__type">
                 по цене
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#">
+              <button class="sortby__type">
                 по типу
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#">
+              <button class="sortby__type">
                 по функционалу
-              </a>
+              </button>
             </li>
           </ul>
           <div class="sortby__arrow">
@@ -201,98 +217,224 @@
           </div>
         </div>
             <ul class="catalog__products-list">
-              <li class="product-card">
+              <li class="product-card"> <!--1-->
                   <img src="#" alt="Перфоратор bosch bfg 6000">
-                  <p class="product-card__name">
+                  <a class="product-card__name" href="#">
                     Перфоратор bosch bfg 6000
-                  </p>
+                  </a>
                   <p class="product-card__old-price">
                     30500 Р.
                   </p>
-                  <a class="product-card__price" href="#">25500</a>
+                  <p class="product-card__price">
+                    25500 Р.
+                  </p>
+                  <ul class="product-card__hidden-btns">
+                      <li>
+                        <a href="#">
+                            купить
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                            в закладки
+                        </a>
+                      </li>
+                  </ul>
                 </li>
-                <li class="product-card">
+                <li class="product-card"> <!--2-->
                     <img src="#" alt="Перфоратор bosch bfg 6000">
-                    <p class="product-card__name">
-                      Перфоратор bosch bfg 6000
-                    </p>
+                    <a class="product-card__name" href="#">
+                      Перфоратор bosch bfg 6000 
+                    </a>
                     <p class="product-card__old-price">
                       30500 Р.
                     </p>
-                    <a class="product-card__price" href="#">25500</a>
+                    <p class="product-card__price">
+                      25500
+                    </p>
+                    <ul class="product-card__hidden-btns">
+                      <li>
+                        <a href="#">
+                            купить
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                            в закладки
+                        </a>
+                      </li>
+                    </ul>
                   </li>
-                  <li class="product-card product-card--new">
+                  <li class="product-card product-card--new"> <!--3-->
                       <img src="#" alt="Перфоратор bosch bfg 6000">
-                      <p class="product-card__name">
+                      <a class="product-card__name" href="#">
                         Перфоратор bosch bfg 6000
-                      </p>
+                      </a>
                       <p class="product-card__old-price">
                         30500 Р.
                       </p>
-                      <a class="product-card__price" href="#">25500</a>
+                      <p class="product-card__price">
+                        25500
+                      </p>
+                      <ul class="product-card__hidden-btns">
+                          <li>
+                            <a href="#">
+                                купить
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                                в закладки
+                            </a>
+                          </li>
+                      </ul>
                   </li>
-                  <li class="product-card product-card--new">
+                  <li class="product-card product-card--new"> <!--4-->
                     <img src="#" alt="Перфоратор bosch bfg 3000">
-                    <p class="product-card__name">
+                    <a class="product-card__name" href="#">
                       Перфоратор bosch bfg 3000
-                    </p>
+                    </a>
                     <p class="product-card__old-price">
                       22500 Р.
                     </p>
-                    <a class="product-card__price" href="#">15500</a>
-                  </li>
-                  <li class="product-card">
-                    <img src="#" alt="Перфоратор bosch bfg 6000">
-                    <p class="product-card__name">
-                      Перфоратор bosch bfg 6000
+                    <p class="product-card__price">
+                      15500
                     </p>
+                    <ul class="product-card__hidden-btns">
+                        <li>
+                          <a href="#">
+                              купить
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                              в закладки
+                          </a>
+                        </li>
+                    </ul>
+                  </li>
+                  <li class="product-card"> <!--5-->
+                    <img src="#" alt="Перфоратор bosch bfg 6000">
+                    <a class="product-card__name" href="#">
+                      Перфоратор bosch bfg 6000
+                    </a>
                     <p class="product-card__old-price">
                       30500 Р.
                     </p>
-                    <a class="product-card__price" href="#">25500</a>
+                    <p class="product-card__price">
+                      25500
+                    </p>
+                    <ul class="product-card__hidden-btns">
+                        <li>
+                          <a href="#">
+                              купить
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                              в закладки
+                          </a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="product-card product-card--new">
+                <li class="product-card product-card--new"> <!--6-->
                   <img src="#" alt="Перфоратор bosch bfg 2000">
-                  <p class="product-card__name">
+                  <a class="product-card__name" href="#">
                     Перфоратор bosch bfg 2000
-                  </p>
+                  </a>
                   <p class="product-card__old-price not-visible">
                     empty
                   </p>
-                  <a class="product-card__price" href="#">12500</a>
-                </li>
-                <li class="product-card product-card--new">
-                  <img src="#" alt="Перфоратор bosch bfg 3000">
-                  <p class="product-card__name">
-                    Перфоратор bosch bfg 3000
+                  <p class="product-card__price">
+                    12500
                   </p>
+                  <ul class="product-card__hidden-btns">
+                      <li>
+                        <a href="#">
+                            купить
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                            в закладки
+                        </a>
+                      </li>
+                  </ul>
+                </li>
+                <li class="product-card product-card--new"> <!--7-->
+                  <img src="#" alt="Перфоратор bosch bfg 3000">
+                  <a class="product-card__name" href="#">
+                    Перфоратор bosch bfg 3000
+                  </a>
                   <p class="product-card__old-price">
                     22500 Р.
                   </p>
-                  <a class="product-card__price" href="#">15500</a>
-                </li>
-                <li class="product-card">
-                  <img src="#" alt="Перфоратор bosch bfg 6000">
-                  <p class="product-card__name">
-                    Перфоратор bosch bfg 6000
+                  <p class="product-card__price">
+                    15500
                   </p>
+                  <ul class="product-card__hidden-btns">
+                      <li>
+                        <a href="#">
+                            купить
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                            в закладки
+                        </a>
+                      </li>
+                  </ul>
+                </li>
+                <li class="product-card"> <!--8-->
+                  <img src="#" alt="Перфоратор bosch bfg 6000">
+                  <a class="product-card__name" href="#">
+                    Перфоратор bosch bfg 6000
+                  </a>
                   <p class="product-card__old-price">
                     30500 Р.
                   </p>
-                  <a class="product-card__price" href="#">25500</a>
+                  <p class="product-card__price">
+                    25500
+                  </p>
+                  <ul class="product-card__hidden-btns">
+                      <li>
+                        <a href="#">
+                            купить
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                            в закладки
+                        </a>
+                      </li>
+                  </ul>
               </li>
-              <li class="product-card product-card--new">
+              <li class="product-card product-card--new"> <!--9-->
                 <img src="#" alt="Перфоратор bosch bfg 2000">
-                <p class="product-card__name">
+                <a class="product-card__name" href="#">
                   Перфоратор bosch bfg 2000
-                </p>
+                </a>
                 <p class="product-card__old-price not-visible">
                   empty
                 </p>
-                <a class="product-card__price" href="#">12500</a>
+                <p class="product-card__price">
+                  12500
+                </p>
+                <ul class="product-card__hidden-btns">
+                    <li>
+                      <a href="#">
+                          купить
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                          в закладки
+                      </a>
+                    </li>
+                </ul>
               </li>       
             </ul>
-            <ul class="catalog__pagination">
+            <ul class="pagination">
               <li>
                 <a href="#" class="pagination__button">
                   1
@@ -316,7 +458,7 @@
             </ul>
       </section>
       <section class="description">
-        <h2>
+        <h2 class="section-headers h2-black">
           пара слов о перфораторах
         </h2>
         <p>
@@ -335,11 +477,12 @@
           <p> 
             г. Санкт-Петербург ул. Б. Конюшенная, д. 19/8
           </p>
-            <a class="footer-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          </p>
+          <a class="footer-tel" href="tel:+78125550555">
+            +7 (812) 555-05-55
+          </a>
         </div>
-        <div class="footer-navigation">
-          <ul class="footer-nav">
+        <div class="footer-nav">
+          <ul class="footer-nav__row">
             <li> 
               <a href="#">Компания</a>
             </li>
@@ -356,7 +499,7 @@
               <a href="#">Контакты</a>
             </li>
           </ul>
-          <ul class="footer-nav footer-nav_gold">
+          <ul class="footer-nav__row footer-nav--gold">
             <li> 
               <a href="#">Материалы</a> 
             </li>
@@ -373,25 +516,34 @@
         </div>
       </div>
       <div class=footer-bottom>
-        <p>© 2010–2019 Компания «Техномарт»<br>
-          Все права защищены</p>
+        <p class="footer__copyright">© 2010–2019 Компания «Техномарт»<br>
+          Все права защищены
+        </p>
         <ul class="social">
           <li> 
-            <a class="social__link social-vk" href="#"></a> 
+            <a class="social__link" href="#">
+              <img src="#" alt="логотип vk.com">
+            </a> 
           </li>
           <li> 
-            <a class="social__link social-fb" href="#"></a> 
+            <a class="social__link" href="#">
+              <img src="#" alt="логотип facebook.com">
+            </a> 
           </li>
           <li> 
-            <a class="social__link social-instagram" href="#"></a> 
+            <a class="social__link" href="#">
+              <img src="#" alt="логотип instagram.com">
+            </a> 
           </li>
         </ul>
-        <p class="footer-feedback">Обратная связь:
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="footer-dev">Разработано —
-          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-        </p>
+        <div class="footer-bottom__right-block">
+          <p class="footer__info">Обратная связь:
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <p class="footer__info">Разработано —
+            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+          </p>
+        </div>
       </div>
     </footer>
   </body>

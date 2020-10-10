@@ -14,7 +14,7 @@
           <img src="#" alt="логотип магазина Техномарт">
         </div>
         <label class="header-top__search"> <!--Без Label и с псевдоэлементом ::before или с картинкой в label-->
-          <input class="header-top__search" type="search" name="search" aria-label="Поле для поиска" placeholder="Поиск:">
+          <input type="search" name="search" aria-label="Поле для поиска" placeholder="Поиск:">
         </label>
         <ul class="header-top__menu">
         <li>
@@ -35,7 +35,7 @@
         </ul>
       </div>  
       <div class="header-middle">
-        <p class="header-declare">
+        <p class="header-middle__declare">
           Интернет-магазин строительных материалов и инструментов для ремонта
         </p>
         <span class="header-middle__phone">
@@ -44,7 +44,7 @@
           </svg> 
           <a href="tel:+78125550555">+7(812) 555-05-55</a>
         </span>
-        <p class="header-address">
+        <p class="header-middle__address">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
         </p>
         <a class="header-middle__login" href="#">
@@ -87,7 +87,9 @@
     </header>
     <main class="page-content">
       <section class="highlights">
-        <h2>Основные категории товаров и услуг</h2>
+        <h2 class="hidden">
+          Основные категории товаров и услуг
+        </h2>
         <div class="highlights__cards">
           <div class="highlight-card card-new highlight-card--yellow">
             <h3>
@@ -156,8 +158,8 @@
 
       </section>
       <section class="popular-block">
-        <div class=popular-block__header>
-          <h2>
+        <div class="popular-block__header">
+          <h2 class="section-headers">
             популярные товары:
           </h2>
           <a class="index-btns" href="#">
@@ -165,53 +167,108 @@
           </a>
         </div>
         <ul class="popular-block__products">
-          <li class="product-card">
+          <li class="product-card"> <!--1-->
             <img src="#" alt="Перфоратор bosch bfg 9000">
-            <p class="product-card__name">
+            <a class="product-card__name" href="#">
               Перфоратор bosch bfg 9000
-            </p>
-            <p class=product-card__old-price>
+            </a>
+            <p class="product-card__old-price">
               32500 Р.
             </p>
-            <a class="product-card__price" href="#">22500</a>
-
-          </li>
-          <li class="product-card product-card--new">
-            <img src="#" alt="Перфоратор bosch bfg 3000">
-            <p class="product-card__name">
-              Перфоратор bosch bfg 3000
+            <p class="product-card__price">
+              22500
             </p>
-            <p class=product-card__old-price>
+            <ul class="product-card__hidden-btns">
+                <li>
+                  <a href="#">
+                      купить
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                      в закладки
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li class="product-card product-card--new"> <!--2-->
+            <img src="#" alt="Перфоратор bosch bfg 3000">
+            <a class="product-card__name" href="#">
+              Перфоратор bosch bfg 3000
+            </a>
+            <p class="product-card__old-price">
               22500 Р.
             </p>
-            <a class="product-card__price" href="#">15500</a>
-          </li>
-          <li class="product-card">
-            <img src="#" alt="Перфоратор bosch bfg 6000">
-            <p class="product-card__name">
-              Перфоратор bosch bfg 6000
+            <p class="product-card__price">
+              15500
             </p>
-            <p class=product-card__old-price>
+            <ul class="product-card__hidden-btns">
+                <li>
+                  <a href="#">
+                      купить
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                      в закладки
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li class="product-card"> <!--3-->
+            <img src="#" alt="Перфоратор bosch bfg 6000">
+            <a class="product-card__name" href="#">
+              Перфоратор bosch bfg 6000
+            </a>
+            <p class="product-card__old-price">
               30500 Р.
             </p>
-            <a class="product-card__price" href="#">25500</a>
-          </li>
-          <li class="product-card product-card--new">
-            <img src="#" alt="Перфоратор bosch bfg 2000">
-            <p class="product-card__name">
-              Перфоратор bosch bfg 2000
+            <p class="product-card__price">
+              25500
             </p>
+            <ul class="product-card__hidden-btns">
+                <li>
+                  <a href="#">
+                      купить
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                      в закладки
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li class="product-card product-card--new"> <!--4-->
+            <img src="#" alt="Перфоратор bosch bfg 2000">
+            <a class="product-card__name" href="#">
+              Перфоратор bosch bfg 2000
+            </a>
             <p class="product-card__old-price not-visible">
               empty
             </p>
-            <a class="product-card__price" href="#">12500</a>
+            <p class="product-card__price">
+              12500
+            </p>
+            <ul class="product-card__hidden-btns">
+                <li>
+                  <a href="#">
+                      купить
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                      в закладки
+                  </a>
+                </li>
+            </ul>
           </li>
         </ul>
 
       </section>
       <section class="popular-block">
-        <div class=popular-block__header>
-          <h2>
+        <div class="popular-block__header">
+          <h2 class="section-headers">
             популярные производители:
           </h2>
           <a class="index-btns" href="#">
@@ -246,7 +303,7 @@
         </ul>
       </section>
       <section class="service">
-        <h2 class="service-h2">
+        <h2 class="section-headers h2-black">
           сервисы
         </h2>
         <p>
@@ -255,7 +312,7 @@
         <div class="service-tabs">
           <ul class="service-tabs__switch">
             <li>
-              <button class="service-tabs__button service-delivery" type="button"> 
+              <button class="service-tabs__button default service-delivery" type="button"> 
                 Доставка
               </button>
             </li>
@@ -270,29 +327,29 @@
               </button>
             </li>
           </ul>
-          <div class="service-tab service-tab1 service-tab--default">
+          <div class="service-tab service-tab-delivery">
             <h3 class="service-tab__title">
               Доставка
             </h3>
-            <p>
+            <p class="service-tab__text">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
             </p>
             <!--Скорее всего, здесь блоки с контентными фото и градиентный фон или просто множественный фон-->
           </div>
-          <div class="service-tab service-tab2">
+          <div class="service-tab service-tab-warranty">
             <h3 class="service-tab__title">
               Гарантия
             </h3>
-            <p>
+            <p class="service-tab__text">
               Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
             </p>
             <!--Скорее всего, здесь блоки с контентными фото и градиентный фон или просто множественный фон-->
           </div>
-          <div class="service-tab service-tab3">
+          <div class="service-tab service-tab-credit">
             <h3 class="service-tab__title">
                 Кредит
             </h3>
-            <p>
+            <p class="service-tab__text">
               Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
             </p>
             <a href="#">отправить заявку</a> <!--Хчется вставить кнопку, но не вижу в макете форм или модальных окон, требующих действия -->
@@ -303,7 +360,7 @@
       </section>
       <section class="company-info">
         <div class="info">
-          <h2 class="index-h2">
+          <h2 class="section-headers h2-black">
             Компания Техномарт
           </h2>
           <p class="info-text">
@@ -326,7 +383,7 @@
           <a class="index-btns" href="#">Подробнее о компании</a>
         </div>
         <div class="contacts">
-          <h2 class="index-h2">
+          <h2 class="section-headers h2-black">
             Контакты
           </h2>
           <p>
@@ -336,22 +393,23 @@
           <a class="index-btns" href="#">заблудились? напишите нам!</a>
         </div>
       </section>
-
     </main>
     <footer class="footer">
       <div class="footer-top">
-        <div class="footer-contacts">
-          <a class="logo logo-bottom" href="#" aria-label="Техномарт"> 
-            <img src=# alt="Логотип магазина Техномарт"> 
-          </a>
-          <p> 
-            г. Санкт-Петербург ул. Б. Конюшенная, д. 19/8
-          </p>
-            <a class="footer-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          </p>
+        
+        <div class="footer-contacts"> 
+            <a class="logo logo-bottom" href="#" aria-label="Техномарт"> 
+              <img src=# alt="Логотип магазина Техномарт"> 
+            </a>
+            <p> 
+              г. Санкт-Петербург ул. Б. Конюшенная, д. 19/8
+            </p>
+            <a class="footer-tel" href="tel:+78125550555">
+              +7 (812) 555-05-55
+            </a>
         </div>
-        <div class="footer-navigation">
-          <ul class="footer-nav">
+        <div class="footer-nav">
+          <ul class="footer-nav__row">
             <li> 
               <a href="#">Компания</a>
             </li>
@@ -368,7 +426,7 @@
               <a href="#">Контакты</a>
             </li>
           </ul>
-          <ul class="footer-nav footer-nav_gold">
+          <ul class="footer-nav__row footer-nav--gold">
             <li> 
               <a href="#">Материалы</a> 
             </li>
@@ -385,25 +443,34 @@
         </div>
       </div>
       <div class=footer-bottom>
-        <p>© 2010–2019 Компания «Техномарт»<br>
-          Все права защищены</p>
-        <ul class="social">
-          <li> 
-            <a class="social__link social-vk" href="#"></a> 
-          </li>
-          <li> 
-            <a class="social__link social-fb" href="#"></a> 
-          </li>
-          <li> 
-            <a class="social__link social-instagram" href="#"></a> 
-          </li>
-        </ul>
-        <p class="footer-feedback">Обратная связь:
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <p class="footer__copyright">© 2010–2019 Компания «Техномарт»<br>
+          Все права защищены
         </p>
-        <p class="footer-dev">Разработано —
-          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-        </p>
+          <ul class="social">
+            <li> 
+              <a class="social__link" href="#">
+                <img src="#" alt="логотип vk.com">
+              </a> 
+            </li>
+            <li> 
+              <a class="social__link" href="#">
+                <img src="#" alt="логотип facebook.com">
+              </a> 
+            </li>
+            <li> 
+              <a class="social__link" href="#">
+                <img src="#" alt="логотип instagram.com">
+              </a> 
+            </li>
+          </ul>
+          <div class="footer-bottom__right-block">
+            <p class="footer__info">Обратная связь:
+              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </p>
+            <p class="footer__info">Разработано —
+              <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+            </p>
+        </div>
       </div>
     </footer>
   </body>

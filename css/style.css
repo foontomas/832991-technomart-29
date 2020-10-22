@@ -1,0 +1,118 @@
+:root{
+   
+    --ordinary-text: #000000;
+    --hdr-text: #FFFFFF;
+    --hdr-ftr-back: #293449;
+    --basic-red: #EE3643; 
+    --hdr-general-back: #F1F5F7;
+    --hdr-address: #32425C;
+    --hdr-order-btn: #63A63E;    
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Cuprum", "Arial", sans-serif;
+    text-align: center;
+    color: #333333;
+    background-color: #f2f2f2;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+.header-top,
+.header__submenu {
+    background-color: var(--hdr-ftr-back);
+}
+
+.header-top a,
+.header__submenu a {
+    color: var(--hdr-text);
+}
+
+.header-top__logo{
+    background-color: var(--basic-red);
+}
+
+.header-top__search{
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 43px;
+}
+.header-top__search::before{
+    background-image: url(../img/icon-search.svg);
+    content: "";
+    width: 17px;
+    height: 17px;
+    top: 50%;
+    left: 17px;
+    transform: translateY(-50%);
+    opacity: .3;
+    position: absolute;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.header-top__menu :nth-child(3) {
+    background-color: var(--hdr-order-btn);
+}
+
+.header-middle{
+    background-color: var(--hdr-general-back);
+}
+
+.header-middle__declare {
+    font-family: Cuprum;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: var(--basic-red);
+}
+
+.header-middle__phone,
+.header-middle__phone a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 30px;
+    color: var(--basic-red);
+}
+
+.header-middle__address {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--hdr-address);
+}
+
+.header-middle__login,
+.header-middle__register {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--ordinary-text);
+    background-color: var(--hdr-text);
+}
+

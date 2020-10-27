@@ -13,20 +13,27 @@
         <div class="header-top__logo">
           <img src="./img/logo-technomart.png" alt="логотип магазина Техномарт" width="107px" height="17px">
         </div>
-        <input class="header-top__search" type="search" name="search" aria-label="Поле для поиска" placeholder="Поиск:">
+        <form class="header-top__search">
+          <label class="icon-search">
+            <input type="search" name="search" aria-label="Поле для поиска" placeholder="Поиск:">
+          </label>
+          <button type="submit" class="hidden">
+            найти
+          </button>
+        </form>
         <ul class="header-top__menu">
         <li>
-          <a href="#">
+          <a class="btn-bookmark" href="#">
             Закладки: 0
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="btn-basket" href="#">
             Корзина: 0
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="checkout" href="#">
             Оформить заказ
           </a>
         </li>
@@ -55,8 +62,8 @@
       </div>
       
       
-      <nav class="header__submenu">
-        <ul>
+      <nav class="header__submenu" >
+        <ul class="submenu__content">
           <li>
             <a href="#">Главная</a>
           </li>

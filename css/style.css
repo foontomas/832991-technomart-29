@@ -10,7 +10,12 @@
     --hdr-order-btn: #63A63E;
     --hdr-order-btn-hover: #5FBB2D;
     --hdr-middle-active: #C5C5C5;
-    --hdr-topmenu-active: #161D29;   
+    --hdr-topmenu-active: #161D29;
+    --main-yellow-card: #FFBF47;
+    --main-blue-card: #3BBCE3;
+    --main-magenta-card: #DC91D8;
+    --main-green-card: #8ED78F;
+
 
 }
 
@@ -247,7 +252,7 @@ li {
     padding-bottom: 20px;
     padding-left: 34px;
     padding-right: 24px;
-    display
+    display: inline-block;
 }
 
 .header__submenu a:hover,
@@ -258,4 +263,139 @@ li {
 .header__submenu a:active {
     background-color: var(--hdr-ftr-back-active);
     color: rgba(255, 255, 255, 0.5);
+}
+
+.highlight-card {
+    width: 300px;
+    min-height: 123px;
+    padding-top: 20px;
+    padding-left: 23px;
+    color: var(--hdr-text);
+}
+
+.highlight-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px; 
+    padding: 0;
+    margin: 0;
+}
+
+.highlight-card a {
+    color: inherit;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(255,255,255,0.3);
+    display: inline-block;
+    width: 135px;
+    padding: 10px 0px;
+}
+
+.highlight-card a:focus,
+.highlight-card a:hover {
+    cursor: pointer;
+    background-color: rgba(197,197,197,0.3);
+}
+
+.highlight-card a:active {
+    background-color: rgba(169, 169, 169, 0.3);
+}
+
+.highlight-card--yellow {
+    background-color: var(--main-yellow-card);
+}
+
+.highlight-card--blue {
+    background-color: var(--main-blue-card);
+}
+
+.highlight-card--magenta {
+    background-color: var(--main-magenta-card);
+}
+
+.highlight-card--green {
+    background-color: var(--main-green-card);
+}
+
+.highlight-card:nth-child(1) {
+    background-image: url(../img/icon-1.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.highlight-card:nth-child(2) {
+    background-image: url(../img/icon-2.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.highlight-card:nth-child(3) {
+    background-image: url(../img/icon-3.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.highlight-card:nth-child(4) {
+    background-image: url(../img/icon-4.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.highlight-card:nth-child(5) {
+    background-image: url(../img/icon-5.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.card-new::after {
+    content: "";
+    height: 70px;
+    width: 70px;
+    top: 0;
+    right: 0;
+    background-image: url(../img/card-new.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    z-index: 1;
+}
+.slide {
+    background-color: var(--hdr-ftr-back);
+    width: 620px;
+    height: 266px;
+    color: var(--hdr-text) ;
+}
+
+.slide h3 {
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+.slide p {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.slide a {
+    color: inherit;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    background-color: var(--basic-red);
+    min-width: 192px;
+    padding: 10px 0px;
+    display: inline-block;
+}
+
+.slide-1 {
+    background-image: url(../img/perfors.png);
+    background-clip: border-box;
+}
+
+.slide-2 {
+    background-image: url(../img/drills.png);
+    background-origin: border-box;
 }

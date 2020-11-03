@@ -1,10 +1,11 @@
 :root{
-   
     --ordinary-text: #000000;
     --hdr-text: #FFFFFF;
     --hdr-ftr-back: #293449;
     --hdr-ftr-back-active: #1D2739;
     --basic-red: #EE3643; 
+    --basic-red-hover: #CA2C37;
+    --basic-red-active: #BA2732;
     --hdr-general-back: #F1F5F7;
     --hdr-address: #32425C;
     --hdr-order-btn: #63A63E;
@@ -20,8 +21,7 @@
     --product-card-oldprice: #A9A9A9;
     --hidden-btns-border: #63A63E;
     --hidden-btns-active: #518534;
-
-
+    --footer-nav-gold: #FFD180;
 }
 
 body {
@@ -55,12 +55,20 @@ li {
 }
 
 .header-top a,
-.header__submenu a {
+.header__submenu {
     color: var(--hdr-text);
 }
 
-.header-top__logo{
+.header-top__logo,
+.logo-bottom {
     background-color: var(--basic-red);
+    height: 47px;
+    width: 220px;
+    text-align: center;
+    padding-top: 13px;
+    margin-bottom: -5px;
+    box-shadow: inset 0 -5px 0 rgba(0,0,0,.24);
+    display: inline-block;
 }
 
 .header-top__search,
@@ -400,6 +408,15 @@ main {
     display: inline-block;
 }
 
+.index-btns:hover,
+.index-btns:focus {
+    background-color: var(--basic-red-hover);
+}
+
+.index-btns:active {
+    background-color: var(--basic-red-active);
+}
+
 .slide-1 {
     background-image: url(../img/perfors.png);
     background-clip: border-box;
@@ -440,7 +457,8 @@ main {
     min-height: 89px;
 }
 
-.section-headers {
+.section-headers,
+.service-tab__title {
     color: var(--hdr-address);
     text-transform: uppercase;
     font-size: 30px;
@@ -473,23 +491,28 @@ main {
 
 .product-card__price {
     color: var(--hdr-text);
-    background-color: var(--basic-red);
+    background-image: url(../img/red-triangle.svg);
     min-height: 38px;
-    width: 115px;
+    width: 141px;
     padding: 10px 0 0 0;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
 }
 
-.product-card__price::before {
+/*на случай, если картинки отвалятся*/
+.product-card__price::before {          
     content: "";
-    height: 38px;
-    width: 141px;
-    position: relative;
-    background-image: url(../img/red-triangle.svg);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    top: 0;
-    left: -6px;
+    height: 36px;
+    width: 114px;
+    position: absolute;
+    background-color: var(--basic-red);
+    /*background-repeat: no-repeat;
+    background-position: 0 0;*/
+    top: 0px;
+    left: 6px;
     z-index: -1;
+    
 }
 
 .product-card__old-price {
@@ -565,5 +588,118 @@ vendor-card:focus {
     width: 220px;
     height: 145px;
     border: 1px solid var(--product-card-border);
+}
+
+.service {
+    background-color: var(--hdr-general-back);
+}
+
+.h2-black {
+    color: var(--ordinary-text);
+}
+
+.service p,
+.service-tab__text,
+.info-text {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 24px;
+    font-family: "PT Sans", Arial, sans-serif;
+}
+
+.service p {
+    width: 410px;
+}
+
+.service-tab__text {
+    width: 275px;
+}
+
+.service-tabs {
+    display: block;
+}
+
+.service-tabs__button {
+    width: 240px;
+    min-height: 61px;
+    border: none;
+    font-size: 21px;
+    line-height: 30px;
+    padding: 13px 0px 17px 22px;
+    text-align: left;
+    color: var(--hdr-text);
+    background-color: var(--hdr-address);
+}
+
+/*.service-tabs__button::after {
+    content: "";
+    position: relative;
+    height: 279px;
+    width: 10px;
+    background-image: url(../img/btn-shadow.png);
+    background-position: 0 0;
+    right: 0;
+    top: -39px;
+}*/
+
+.service-tabs__button:hover,
+.services-tabs__button:focus {
+    background-color: var(--hdr-ftr-back);
+}
+
+.service-tab {
+    width: 619px;
+    min-height: 283px;
+    height: 100%;
+}
+
+.service-tab-delivery {
+    background-image: url(../img/delivery.png);
+    background-repeat: no-repeat;
+    background-position: 100% 80%;
+}
+
+.service-tab-warranty {
+    background-image: url(../img/warranty.png);
+    background-repeat: no-repeat;
+    background-position: 100% 80%;
+}
+
+.service-tab-credit {
+    background-image: url(../img/credit.png);
+    background-repeat: no-repeat;
+    background-position: 100% 80%;
+}
+
+.service-tab-credit .index-btns {
+    border-radius: 5px;
+}
+
+.company-info__transport li {
+    color: var(--ordinary-text);
+    font-size: 18px;
+    line-height: 24px;
+    list-style-image: url(../img/redmarker.svg);
+    text-align: left;
+}
+
+.footer-top {
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--hdr-text);
+    min-height: 193px;
+    background-color: var(--hdr-address);
+}
+
+.footer-top a {
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+.footer-nav--gold {
+    color: var(--footer-nav-gold);
 }
 

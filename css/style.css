@@ -15,6 +15,11 @@
     --main-blue-card: #3BBCE3;
     --main-magenta-card: #DC91D8;
     --main-green-card: #8ED78F;
+    --section-hdrs: #F9F5F0;
+    --product-card-border: #EAEAEA;
+    --product-card-oldprice: #A9A9A9;
+    --hidden-btns-border: #63A63E;
+    --hidden-btns-active: #518534;
 
 
 }
@@ -265,6 +270,10 @@ li {
     color: rgba(255, 255, 255, 0.5);
 }
 
+main {
+    background-color: var(--hdr-text);
+}
+
 .highlight-card {
     width: 300px;
     min-height: 123px;
@@ -379,8 +388,9 @@ li {
     line-height: 24px;
 }
 
-.slide a {
-    color: inherit;
+.slide a,
+.index-btns {
+    color: var(--hdr-text);
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
@@ -399,3 +409,161 @@ li {
     background-image: url(../img/drills.png);
     background-origin: border-box;
 }
+
+.slider__btn {
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    /*border-right: var(--hdr-text);
+    border-bottom: var(--hdr-text);*/
+    border-right: 3px solid red;
+    border-bottom: 3px solid red;
+    z-index: 5;
+    position: relative;
+    padding: 0px;
+}
+
+.slider__btn--right {
+    transform: rotate(-45deg);
+    transform-origin: center;
+}
+
+.slider__btn--left {
+    transform: rotate(135deg);
+    transform-origin: center;
+}
+
+.popular-block__header {
+    background-color: var(--section-hdrs);
+    min-height: 89px;
+}
+
+.section-headers {
+    color: var(--hdr-address);
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.product-card {
+    width: 220px;
+    min-height: 318px;
+    border: 1px solid var(--product-card-border);
+    background-color: var(--hdr-text);
+}
+
+.product-card__name {
+    font-family: "PT Sans",Arial,sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--ordinary-text);
+}
+
+.product-card__price,
+.product-card__old-price {
+    font-family: "PT Sans",Arial,sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.product-card__price {
+    color: var(--hdr-text);
+    background-color: var(--basic-red);
+    min-height: 38px;
+    width: 115px;
+    padding: 10px 0 0 0;
+}
+
+.product-card__price::before {
+    content: "";
+    height: 38px;
+    width: 141px;
+    position: relative;
+    background-image: url(../img/red-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    top: 0;
+    left: -6px;
+    z-index: -1;
+}
+
+.product-card__old-price {
+    color: var(--product-card-oldprice);
+    text-decoration-line: line-through;
+}
+
+.product-card:hover,
+.product-card:focus,
+.vendor-card:hover,
+vendor-card:focus {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card__hidden-btns a {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.hidden-btns__buy {
+    width: 135px;
+    min-height: 38px;
+    color: var(--hdr-text);
+    background-color: var(--hidden-btns-border);
+    box-shadow: inset 0px -3px 0px #367315;
+    border-radius: 2px;
+    /*padding: 10px 12px 10px 25px;*/
+    display: block;
+}
+
+.hidden-btns__add {
+    width: 135px;
+    min-height: 32px;
+    color: var(--hdr-address);
+    font-size: 14px;
+    line-height: 18px;
+    border: 3px solid var(--hidden-btns-border);
+    border-radius: 2px;
+    /*padding: 7px 12px 7px 22px;*/
+    display: block;
+}
+
+.hidden-btns__buy:hover,
+.hidden-btns__buy:focus {
+    background-color: var(--hdr-order-btn-hover);
+}
+
+.hidden-btns__buy:active {
+    background-color: var(--hidden-btns-active);
+}
+
+.hidden-btns__buy::before {
+    content: "";
+    background-image: url(../img/icon-cart.svg);
+    height: 15px;
+    width: 15px;
+    opacity: 0.3;
+    transform: translateY(-50%);
+}
+
+.hidden-btns__add:hover,
+.hidden-btns__add:focus {
+    border-color: var(--hdr-address);
+}
+
+.hidden-btns__add:active {
+    border-color: var(--hdr-address);
+    opacity: 0.5;
+}
+
+.vendor-card {
+    width: 220px;
+    height: 145px;
+    border: 1px solid var(--product-card-border);
+}
+

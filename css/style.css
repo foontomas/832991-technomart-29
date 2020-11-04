@@ -22,6 +22,7 @@
     --hidden-btns-border: #63A63E;
     --hidden-btns-active: #518534;
     --footer-nav-gold: #FFD180;
+    --footer-social: #212A3A;
 }
 
 body {
@@ -702,5 +703,43 @@ vendor-card:focus {
 .footer-nav--gold {
     color: var(--footer-nav-gold);
 }
+
+.footer-bottom {
+    background-color: var(--hdr-ftr-back);
+    color: var(--hdr-text);
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.footer-info a {
+    color: var(--footer-nav-gold);
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.footer-info a:hover,
+.footer-info a:focus {
+    text-decoration-line: underline;
+}
+
+.foter-info a:active {
+    text-decoration: none;
+    color: var(--basic-red);
+}
+
+.social-link {
+    background-color: var(--footer-social);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px; 
+}
+
+.social-link:hover,
+.social-link:focus,
+.social-link:active {
+    background-color: var(--basic-red);
+}
+
+
 
 

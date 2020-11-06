@@ -11,28 +11,33 @@
     <header class="header">
       <div class="header-top">
         <div class="header-top__logo">
-          <img src="#" alt="логотип магазина Техномарт">
+          <img src="./img/logo-technomart.png" alt="логотип магазина Техномарт" width="107px" height="17px">
         </div>
-        <label class="header-top__search"> <!--Без Label и с псевдоэлементом ::before или с картинкой в label-->
-          <input type="search" name="search" aria-label="Поле для поиска" placeholder="Поиск:">
-        </label>
+        <form class="header-top__search">
+          <label class="icon-search">
+            <input type="search" name="search" aria-label="Поле для поиска" placeholder="Поиск:">
+          </label>
+          <button type="submit" class="hidden">
+            найти
+          </button>
+        </form>
         <ul class="header-top__menu">
-        <li>
-          <a href="#">
-            Закладки: 0
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Корзина: 10
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Оформить заказ
-          </a>
-        </li>
-        </ul>
+          <li>
+            <a class="btn-bookmark" href="#">
+              Закладки: 0
+            </a>
+          </li>
+          <li>
+            <a class="btn-basket" href="#">
+              Корзина: 0
+            </a>
+          </li>
+          <li>
+            <a class="checkout" href="#">
+              Оформить заказ
+            </a>
+          </li>
+          </ul>
       </div>  
       <div class="header-middle">
         <p class="header-declare">
@@ -74,7 +79,7 @@
       
       
       <nav class="header__submenu">
-        <ul>
+        <ul class="submenu__content">
           <li>
             <a href="#">Главная</a>
           </li>
@@ -522,17 +527,17 @@
         <ul class="social">
           <li> 
             <a class="social__link" href="#">
-              <img src="#" alt="логотип vk.com">
+              <img src="./img/vk-logo.svg" width="25.05" height="14.06" alt="логотип vk.com">
             </a> 
           </li>
           <li> 
             <a class="social__link" href="#">
-              <img src="#" alt="логотип facebook.com">
+              <img src="./img/fb-logo.svg" width="12" height="22" alt="логотип facebook.com">
             </a> 
           </li>
           <li> 
             <a class="social__link" href="#">
-              <img src="#" alt="логотип instagram.com">
+              <img src="./img/insta-logo.svg" width="21" height="21" alt="логотип instagram.com">
             </a> 
           </li>
         </ul>

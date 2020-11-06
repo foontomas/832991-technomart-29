@@ -1,5 +1,6 @@
 :root{
     --ordinary-text: #000000;
+    --body-back: #f2f2f2;
     --hdr-text: #FFFFFF;
     --hdr-ftr-back: #293449;
     --hdr-ftr-back-active: #1D2739;
@@ -21,17 +22,17 @@
     --product-card-oldprice: #A9A9A9;
     --hidden-btns-border: #63A63E;
     --hidden-btns-active: #518534;
+    --hidden-btns-shadow: #367315;
     --footer-nav-gold: #FFD180;
     --footer-social: #212A3A;
 }
 
 body {
-    margin: 0;
     padding: 0;
     font-family: "Cuprum", "Arial", sans-serif;
     text-align: center;
     color: #333333;
-    background-color: #f2f2f2;
+    background-color: var(--body-back);
 }
 
 a:hover,
@@ -56,7 +57,7 @@ li {
 }
 
 .header-top a,
-.header__submenu {
+.header__submenu a {
     color: var(--hdr-text);
 }
 
@@ -101,7 +102,7 @@ li {
     opacity: 1;
 }
 
-.header-top__search input:focus+.icon-search::before {
+.header-top__search input:focus + .icon-search::before {
     position: absolute;
     content: "";
     width: 17px;
@@ -181,7 +182,6 @@ li {
 }
 
 .header-middle__declare {
-    font-family: Cuprum;
     font-style: italic;
     font-weight: 400;
     font-size: 16px;
@@ -524,7 +524,7 @@ main {
 .product-card:hover,
 .product-card:focus,
 .vendor-card:hover,
-vendor-card:focus {
+.vendor-card:focus {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -539,7 +539,7 @@ vendor-card:focus {
     min-height: 38px;
     color: var(--hdr-text);
     background-color: var(--hidden-btns-border);
-    box-shadow: inset 0px -3px 0px #367315;
+    box-shadow: inset 0px -3px 0px var(--hidden-btns-shadow);
     border-radius: 2px;
     /*padding: 10px 12px 10px 25px;*/
     display: block;
@@ -695,7 +695,6 @@ vendor-card:focus {
 }
 
 .footer-top a {
-    font-size: inherit;
     line-height: inherit;
     color: inherit;
 }
@@ -711,27 +710,32 @@ vendor-card:focus {
     line-height: 18px;
 }
 
-.footer-info a {
+.footer__info a {
     color: var(--footer-nav-gold);
     font-size: inherit;
     line-height: inherit;
 }
 
-.footer-info a:hover,
-.footer-info a:focus {
+.footer__info a:hover,
+.footer__info a:focus {
     text-decoration-line: underline;
 }
 
-.foter-info a:active {
+.foter__info a:active {
     text-decoration: none;
     color: var(--basic-red);
 }
 
-.social-link {
+.social li{
     background-color: var(--footer-social);
     border-radius: 50%;
     width: 44px;
     height: 44px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    width: 42px;
 }
 
 .social-link:hover,

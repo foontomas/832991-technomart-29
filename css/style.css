@@ -7,12 +7,13 @@
     --basic-red: #EE3643; 
     --basic-red-hover: #CA2C37;
     --basic-red-active: #BA2732;
-    --hdr-general-back: #F1F5F7;
+    --hdr-general-back: #F3F7F9;
     --hdr-address: #32425C;
     --hdr-order-btn: #63A63E;
     --hdr-order-btn-hover: #5FBB2D;
     --hdr-middle-active: #C5C5C5;
     --hdr-topmenu-active: #161D29;
+    --catalog-hdr-back: #F2F6F8;
     --main-yellow-card: #FFBF47;
     --main-blue-card: #3BBCE3;
     --main-magenta-card: #DC91D8;
@@ -25,6 +26,7 @@
     --hidden-btns-shadow: #367315;
     --footer-nav-gold: #FFD180;
     --footer-social: #212A3A;
+    --sort-filter-back: #F7F3EC;
 }
 
 body {
@@ -742,6 +744,191 @@ main {
 .social-link:focus,
 .social-link:active {
     background-color: var(--basic-red);
+}
+
+.catalog-header {
+    background-color: var(--catalog-hdr-back);
+}
+
+.filter-header,
+.input-range,
+.input-range input,
+.sortby,
+.sortby__type {
+    background-color: var(--sort-filter-back);
+    border: none;
+}
+
+.sortby__type {
+    font-family: "PT Sans",Arial,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--ordinary-text);
+    opacity: 0.3;
+    text-transform: uppercase;
+    border-bottom: 1px dashed var(--basic-red); 
+}
+
+.sortby__title {
+    font-family: "PT Sans",Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--ordinary-text);
+    text-transform: uppercase;
+}
+
+.sortby .active-sort {
+    color: var(--basic-red);
+    opacity: 1;
+    border-bottom: 1px solid transparent;
+}
+
+.sortby__arrow {
+    fill: var(--basic-red);
+}
+
+.sortby__arrow .rotate {
+    transform: rotate(180deg);
+    fill: var(--hdr-middle-active);
+}
+
+.sortby__type:hover,
+.sortby__type:focus {
+    border-bottom: 1px solid var(--basic-red);
+    opacity: 1;
+}
+
+.active-sort:hover,
+.active-sort:focus {
+    cursor: text;
+}
+
+.sortby__type:active {
+    border: none;
+    opacity: 1;
+    color: var(--basic-red);
+}
+
+.sortby__arrow .rotate:hover,
+.sortby__arrow .rotate:focus {
+    fill: var(--ordinary-text);
+}
+
+
+.sortby__arrow .rotate:active {
+    fill: var(--basic-red);
+}
+
+.sortby__arrow a:visited {
+    fill: var(--basic-red);
+}
+
+.user {
+    display: flex;
+    position: relative;
+    width: 299px;
+    min-height: 45px;
+    background-color: var(--hdr-text);
+    padding: 12px 15px 12px 17px;
+    margin-bottom: 5px;
+}
+
+.user__name {
+    color: var(--ordinary-text);
+    font-size: 21px;
+    line-height: 21px;
+    padding-left: 40px;
+   padding-top: 13px;
+}
+
+.user__logout {
+    display: block;
+    width: 20px;
+    background-image: url(../img/icon-login_hover.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+    margin-left: 20px;
+}
+
+.user__name::before {
+    position: absolute;
+    content: "";
+    transform: translateY(-50%);
+    width: 20px;
+    height: 18px;
+    background-image: url(../img/icon-user.svg);
+    background-position: 0 0;
+    opacity: 0.3;
+    top: 50%;
+    left: 15px;
+}
+
+.user__name:hover::before,
+.user__name:focus::before {
+    opacity: 1;
+}
+
+.user__logout:focus,
+.user__logout:hover {
+    opacity: 1;
+}
+
+.user__logout:active {
+    opacity: 0.3;
+}
+
+.user__name:active::before {
+    opacity: 0.3;
+}
+
+.user-links a {
+    color: var(--hdr-address);
+    font-size: 16px;
+    line-height: 18px;
+    position: relative;
+}
+
+.user-links__account::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--hdr-address);
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.user-links__orders:focus,
+.user-links__orders:hover,
+.user-links__account:focus,
+.user-links__account:hover {
+    color: var(--basic-red);
+}
+
+.user-links__account:hover::before,
+.user-links__account:focus::before {
+    background-color: var(--basic-red);
+}
+
+.user-links__orders:active,
+.user-links__account:active {
+    color: var(--hdr-middle-active);
+}
+
+.user-links__account:active::before {
+    background-color: var(--hdr-middle-active);
+}
+
+.header-top .placed-in {
+    background-color: var(--basic-red);
+}
+
+.home-link:hover .home-link-icon,
+.home-link:focus .home-link-icon {
+    fill: var(--ordinary-text);
 }
 
 

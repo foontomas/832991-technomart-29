@@ -28,6 +28,7 @@
     --footer-social: #212A3A;
     --sort-filter-back: #F7F3EC;
     --pagination-btn-border: #E5E5E5;
+    --description-back: #F1F5F7;
 }
 
 body {
@@ -1000,4 +1001,51 @@ main {
     font-weight: 400;
     line-height: 18px;
 }
+
+.filter-form legend {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.input-range input {
+    font-family: "PT Sans",Arial,sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.filter-form__producers label,
+.filter-form__power-type label {
+    font-family: "PT Sans",Arial,sans-serif;
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.filter-form button {
+    font-family: "PT Sans",Arial,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--ordinary-text);
+    text-transform: uppercase;
+    border: 1px solid var(--pagination-btn-border);
+    background-color: var(--hdr-text);
+    min-height: 38px;
+}
+
+.filter-form__producers,
+.filter-form__power-type {
+    border: none;
+}
+.input-range,
+.filter-form__producers {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.01);
+}
+
+.description {
+    background-color: var(--description-back);
+}
+
 
